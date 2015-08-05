@@ -5,7 +5,7 @@ A small module for extracting text (e.g. inline `script` and `style` tags) from 
 Used by [eslint-plugin-jade].
 
 [Jade]: http://jade-lang.com
-[eslint-plugin-jage]: https://github.com/myfreeweb/eslint-plugin-jade
+[eslint-plugin-jade]: https://github.com/myfreeweb/eslint-plugin-jade
 
 ## Installation
 
@@ -14,6 +14,8 @@ Install with [npm], obviously:
 ```bash
 npm install --save-dev jade-parser jade-lexer jade-walk-extract-text
 ```
+
+[npm]: https://www.npmjs.com
 
 ## Usage
 
