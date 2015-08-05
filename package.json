@@ -1,7 +1,7 @@
 {
   "name": "jade-walk-extract-text",
   "description": "Walk and transform a Jade AST, extracting text nodes from e.g. script and style tags",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Greg V <greg@unrelenting.technology>",
   "license": "Unlicense",
   "repository": {

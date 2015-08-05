@@ -30,8 +30,14 @@ module.exports = function walkExtract (tree, text, shouldExtract, beforeCallback
 			})
 		}
 		if (!inExtractableNode) return
-		if (node.type !== 'Text') return
-		curTextNodes.push(node)
+		if (node.type === 'Filter') {
+			node.block.nodes.forEach(function (node) {
+				if (node.type === 'Text')
+					curTextNodes.push(node)
+			})
+		} else if (node.type === 'Text') {
+			curTextNodes.push(node)
+		}
 	}, {includeDependencies: true})
 	return results
 }

@@ -17,6 +17,7 @@ test('extract scripts and styles', function(t) {
 		{ text: "print 'hello'", indent: 31, line: 7 },
 		{ text: "body { background: #efefef; color: #444; }\n  html { font-size: 105%; }", indent: 6, line: 9 },
 		{ text: "alert('inline')", indent: 11, line: 13 },
-		{ text: "console.log({\n  dot: 'ted'\n})", indent: 6, line: 15 }
+		{ text: "console.log({\n  dot: 'ted'\n})", indent: 6, line: 15 },
+		{ text: "@testFilter", indent: 6, line: 19 },
 	])
 })
