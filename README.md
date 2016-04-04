@@ -1,18 +1,18 @@
-# jade-walk-extract-text [![npm version](https://img.shields.io/npm/v/jade-walk-extract-text.svg?style=flat)](https://www.npmjs.org/package/jade-walk-extract-text) [![npm downloads](https://img.shields.io/npm/dm/jade-walk-extract-text.svg?style=flat)](https://www.npmjs.org/package/jade-walk-extract-text) [![Build Status](https://img.shields.io/travis/myfreeweb/jade-walk-extract-text.svg?style=flat)](https://travis-ci.org/myfreeweb/jade-walk-extract-text) [![Dependency Status](https://img.shields.io/gemnasium/myfreeweb/jade-walk-extract-text.svg?style=flat)](https://gemnasium.com/myfreeweb/jade-walk-extract-text) [![Unlicense](https://img.shields.io/badge/un-license-green.svg?style=flat)](http://unlicense.org)
+# pug-walk-extract-text [![npm version](https://img.shields.io/npm/v/pug-walk-extract-text.svg?style=flat)](https://www.npmjs.org/package/pug-walk-extract-text) [![npm downloads](https://img.shields.io/npm/dm/pug-walk-extract-text.svg?style=flat)](https://www.npmjs.org/package/pug-walk-extract-text) [![Build Status](https://img.shields.io/travis/myfreeweb/pug-walk-extract-text.svg?style=flat)](https://travis-ci.org/myfreeweb/pug-walk-extract-text) [![Dependency Status](https://img.shields.io/gemnasium/myfreeweb/pug-walk-extract-text.svg?style=flat)](https://gemnasium.com/myfreeweb/pug-walk-extract-text) [![Unlicense](https://img.shields.io/badge/un-license-green.svg?style=flat)](http://unlicense.org)
 
-A small module for extracting text (e.g. inline `script` and `style` tags) from [Jade] files!
+A small module for extracting text (e.g. inline `script` and `style` tags) from [Pug] files (formerly called Jade)!
 
-Used by [eslint-plugin-jade].
+Used by [eslint-plugin-pug].
 
-[Jade]: http://jade-lang.com
-[eslint-plugin-jade]: https://github.com/myfreeweb/eslint-plugin-jade
+[Pug]: http://pug-lang.com
+[eslint-plugin-pug]: https://github.com/myfreeweb/eslint-plugin-pug
 
 ## Installation
 
 Install with [npm], obviously:
 
 ```bash
-npm install --save-dev jade-parser jade-lexer jade-walk-extract-text
+npm install --save-dev pug-parser pug-lexer pug-walk-extract-text
 ```
 
 [npm]: https://www.npmjs.com
@@ -20,15 +20,15 @@ npm install --save-dev jade-parser jade-lexer jade-walk-extract-text
 ## Usage
 
 ```javascript
-var lexer = require('jade-lexer')
-var parser = require('jade-parser')
-var walkExtract = require('jade-walk-extract-text')
+var lexer = require('pug-lexer')
+var parser = require('pug-parser')
+var walkExtract = require('pug-walk-extract-text')
 
 function shouldExtract (node) {
 	return node.type === 'Tag' && (node.name === 'script' || node.name === 'style')
 }
 
-var filename = 'some-file.jade'
+var filename = 'some-file.pug'
 var text = fs.readFileSync(filename, { encoding: 'utf-8' })
 var results = walkExtract(parser(lexer(text, filename), filename), text, shouldExtract)
 // [
@@ -46,7 +46,7 @@ var results = walkExtract(parser(lexer(text, filename), filename), text, shouldE
 Please feel free to submit pull requests!
 Bugfixes and simple non-breaking improvements will be accepted without any questions :-)
 
-By participating in this project you agree to follow the [Contributor Code of Conduct](http://contributor-covenant.org/version/1/2/0/).
+By participating in this project you agree to follow the [Contributor Code of Conduct](http://contributor-covenant.org/version/1/4/).
 
 ## License
 

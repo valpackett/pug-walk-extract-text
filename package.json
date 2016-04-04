@@ -1,17 +1,18 @@
 {
-  "name": "jade-walk-extract-text",
-  "description": "Walk and transform a Jade AST, extracting text nodes from e.g. script and style tags",
-  "version": "0.1.1",
+  "name": "pug-walk-extract-text",
+  "description": "Walk and transform a Pug AST, extracting text nodes from e.g. script and style tags",
+  "version": "1.0.0",
   "author": "Greg V <greg@unrelenting.technology>",
   "license": "Unlicense",
   "repository": {
     "type": "git",
-    "url": "https://github.com/myfreeweb/jade-walk-extract-text"
+    "url": "https://github.com/myfreeweb/pug-walk-extract-text"
   },
   "bugs": {
-    "url": "https://github.com/myfreeweb/jade-walk-extract-text/issues"
+    "url": "https://github.com/myfreeweb/pug-walk-extract-text/issues"
   },
   "keywords": [
+    "pug",
     "jade"
   ],
   "main": "index.js",
@@ -19,11 +20,11 @@
     "test": "node test.js | tap-spec"
   },
   "dependencies": {
-    "jade-walk": "0.0.2"
+    "pug-walk": "0.0.3"
   },
   "devDependencies": {
-    "jade-lexer": "0.0.8",
-    "jade-parser": "0.0.8",
+    "pug-lexer": "1.0.0",
+    "pug-parser": "1.0.0",
     "tap-spec": "^4.0.2",
     "tape": "^4.0.1"
   }

@@ -1,6 +1,6 @@
 'use strict'
 
-var walk = require('jade-walk')
+var walk = require('pug-walk')
 
 module.exports = function walkExtract (tree, text, shouldExtract, beforeCallback, afterCallback) {
 	if (typeof beforeCallback !== 'function')
@@ -30,14 +30,8 @@ module.exports = function walkExtract (tree, text, shouldExtract, beforeCallback
 			})
 		}
 		if (!inExtractableNode) return
-		if (node.type === 'Filter') {
-			node.block.nodes.forEach(function (node) {
-				if (node.type === 'Text')
-					curTextNodes.push(node)
-			})
-		} else if (node.type === 'Text') {
+		if (node.type === 'Text')
 			curTextNodes.push(node)
-		}
 	}, {includeDependencies: true})
 	return results
 }

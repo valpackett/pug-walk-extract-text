@@ -1,7 +1,7 @@
 var test = require('tape')
 var fs = require('fs')
-var lexer = require('jade-lexer')
-var parser = require('jade-parser')
+var lexer = require('pug-lexer')
+var parser = require('pug-parser')
 var walkExtract = require('./')
 
 function shouldExtract (node) {
@@ -10,7 +10,7 @@ function shouldExtract (node) {
 
 test('extract scripts and styles', function(t) {
 	t.plan(1)
-	var text = fs.readFileSync('fixture.jade', { encoding: 'utf-8' })
+	var text = fs.readFileSync('fixture.pug', { encoding: 'utf-8' })
 	var results = walkExtract(parser(lexer(text)), text, shouldExtract)
 	t.deepEqual(results.map(function (r) { delete r.node; return r }), [
 		{ text: "alert('piped')\nalert('piped-no-space')", indent: 8, line: 5 },
