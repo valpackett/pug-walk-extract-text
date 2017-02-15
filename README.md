@@ -4,7 +4,7 @@ A small module for extracting text (e.g. inline `script` and `style` tags) from 
 
 Used by [eslint-plugin-pug].
 
-[Pug]: http://pug-lang.com
+[Pug]: https://pugjs.org
 [eslint-plugin-pug]: https://github.com/myfreeweb/eslint-plugin-pug
 
 ## Installation
