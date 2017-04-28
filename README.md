@@ -44,9 +44,10 @@ var results = walkExtract(parser(lexer(text, filename), filename), text, shouldE
 ## Contributing
 
 Please feel free to submit pull requests!
-Bugfixes and simple non-breaking improvements will be accepted without any questions :-)
 
-By participating in this project you agree to follow the [Contributor Code of Conduct](http://contributor-covenant.org/version/1/4/).
+By participating in this project you agree to follow the [Contributor Code of Conduct](http://contributor-covenant.org/version/1/4/) and to release your contributions under the Unlicense.
+
+[The list of contributors is available on GitHub](https://github.com/myfreeweb/pug-walk-extract-text/graphs/contributors).
 
 ## License
 
