@@ -20,12 +20,12 @@
     "test": "node test.js | tap-spec"
   },
   "dependencies": {
-    "pug-walk": "0.0.3"
+    "pug-walk": "^1.1.0"
   },
   "devDependencies": {
-    "pug-lexer": "1.0.0",
-    "pug-parser": "1.0.0",
-    "tap-spec": "^4.0.2",
-    "tape": "^4.0.1"
+    "pug-lexer": "^3.1.0",
+    "pug-parser": "^2.0.0",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.6.0"
   }
 }
